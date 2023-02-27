@@ -4,7 +4,7 @@ import time as t
 
 starttime = t.time()
 
-pdbPath = 'PDB_decoder\\1azw.pdb'
+pdbPath = 'PDB_decoder\\1phm.pdb'
 csvPath = 'PDB_decoder\\koniec.csv'
 
 data = {
@@ -54,7 +54,7 @@ def AtomSlicer(new_data):
             data['z'].append(line[zSlice])
             data['id-lancucha'].append(line[idLancucha])
             data['id-aminokwasu'].append(line[nrIdAmin])
-            data['helisa/wstazka/tubka'].append('0')
+            data['helisa/wstazka/tubka'].append('T')
             data['dl helisy'].append('0')
 
             if 'CA' in line[atomCentralnySlice]:    
