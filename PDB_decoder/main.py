@@ -1,6 +1,9 @@
 import numpy as np
 import pandas as pd
 
+pdbPath = 'PDB_decoder\\1azw.pdb'
+csvPath = 'PDB_decoder\\1azw.csv'
+
 data = {
     'id':[],
     'aminokwas':[],
@@ -14,7 +17,7 @@ data = {
 }
 
 def HeavyRamEater():
-    with open('PDB_decoder\\1azw.pdb', 'r') as f:
+    with open(pdbPath, 'r') as f:
         file = f.readlines()
     
     pdbData = []
@@ -24,11 +27,14 @@ def HeavyRamEater():
     return pdbData
 
 def AtomSlicer():
+    atomATOMSlice = slice(0,4)
     idSlice = slice(6,11)
     aminokwasSlice = slice(17,20)
     pierwiastekSlice = slice(76,78)
     atomCentralnySlice = slice(12,16)
-    
+    xSlice = slice(30,38)
+    ySlice = slice(38,46)
+    zSlice = slice(46,54)
 
 
 def main():
